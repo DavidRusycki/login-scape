@@ -12,11 +12,16 @@
             transition-duration: 0.2s;
             transition-property: margin;
         }
+        .centro {
+            margin: auto;
+            text-align: center;
+            margin-top: 10em;
+        }
     </style>
 </head>
 <body>
     
-    <div class="container">
+    <div class="centro">
 
         <input type="text" name="usuario" id="usuario" placeholder="Digite qualquer coisa">
         <br>
@@ -33,15 +38,18 @@
             if (document.getElementById('senha').value !== 'david') {
                 padrao ? moveDireita() : moveEsquerda();
             }
+            else {
+                document.getElementById('botaozinho').style.marginLeft = '0px'
+            }
         }
 
         function moveDireita() {
-            document.getElementById('botaozinho').style.marginLeft = '400px'
+            document.getElementById('botaozinho').style.marginLeft = '90px'
             padrao = false;
         }
 
         function moveEsquerda() {
-            document.getElementById('botaozinho').style.marginLeft = '0px'
+            document.getElementById('botaozinho').style.marginLeft = '-90px'
             padrao = true;
         }
 
